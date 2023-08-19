@@ -28536,7 +28536,7 @@ Webflow.define('brand', module.exports = function ($) {
   }
 
   function createBadge() {
-    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
+    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://geofriendtech.github.io?utm_campaign=brandjs');
     var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
       marginRight: '8px',
       width: '16px'
@@ -29025,7 +29025,7 @@ Webflow.define('edit', module.exports = function ($, _, options) {
     $win.off(hashchange, checkHash);
     checkThirdPartyCookieSupport(function (thirdPartyCookiesSupported) {
       $.ajax({
-        url: cleanSlashes("https://editor-api.webflow.com" + '/api/editor/view'),
+        url: cleanSlashes("https://editor-api.geofriendtech.github.io" + '/api/editor/view'),
         data: {
           siteId: $html.attr('data-wf-site')
         },
@@ -29070,7 +29070,7 @@ Webflow.define('edit', module.exports = function ($, _, options) {
   }
 
   function prefix(url) {
-    return url.indexOf('//') >= 0 ? url : cleanSlashes("https://editor-api.webflow.com" + url);
+    return url.indexOf('//') >= 0 ? url : cleanSlashes("https://editor-api.geofriendtech.github.io" + url);
   }
 
   function cleanSlashes(url) {
@@ -29079,7 +29079,7 @@ Webflow.define('edit', module.exports = function ($, _, options) {
 
   function checkThirdPartyCookieSupport(callback) {
     var iframe = window.document.createElement('iframe');
-    iframe.src = "https://webflow.com" + '/site/third-party-cookie-check.html';
+    iframe.src = "https://geofriendtech.github.io" + '/site/third-party-cookie-check.html';
     iframe.style.display = 'none';
     iframe.sandbox = 'allow-scripts allow-same-origin';
 
@@ -38614,6 +38614,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
   var disconnected = _.debounce(function () {
     alert('Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.');
+    
   }, 100);
 
   api.ready = api.design = api.preview = function () {
@@ -38627,10 +38628,10 @@ Webflow.define('forms', module.exports = function ($, _) {
 
   function init() {
     siteId = $('html').attr('data-wf-site');
-    formUrl = "https://webflow.com" + '/api/v1/form/' + siteId; // Work around same-protocol IE XDR limitation - without this IE9 and below forms won't submit
+    formUrl = "https://geofriendtech.github.io" + '/api/v1/form/' + siteId; // Work around same-protocol IE XDR limitation - without this IE9 and below forms won't submit
 
-    if (retro && formUrl.indexOf("https://webflow.com") >= 0) {
-      formUrl = formUrl.replace("https://webflow.com", "http://formdata.webflow.com");
+    if (retro && formUrl.indexOf("https://geofriendtech.github.io") >= 0) {
+      formUrl = formUrl.replace("https://geofriendtech.github.io", "http://formdata.geofriendtech.github.io");
     }
 
     signFileUrl = "".concat(formUrl, "/signFile");
